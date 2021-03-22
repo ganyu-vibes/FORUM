@@ -1,0 +1,381 @@
+/* ---------------- FONTS -------------- */
+@font-face {
+  font-family: 'Bodoni';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://dl.dropboxusercontent.com/s/e06e5vx5ksjb575/BodoniFLF-Roman.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  font-style: italic;
+  font-weight: normal;
+  src: url('https://dl.dropboxusercontent.com/s/s3tv0lqgxlb3hna/BodoniFLF-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  font-style: normal;
+  font-weight: bold;
+  src: url('https://dl.dropboxusercontent.com/s/csatu99j9g4og2w/BodoniFLF-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  font-style: italic;
+  font-weight: bold;
+  src: url('https://dl.dropboxusercontent.com/s/d7iduof7nkmcjfk/BodoniFLF-BoldItalic.ttf') format('truetype');
+}
+
+/* -------------------- LES VARIABLES ---------------- */
+:root {
+  --baw: url('https://i.imgur.com/Xn3pNJo.jpg');
+  --black: #1e1e1e;
+  --font1: 'Bodoni';
+  --font2: 'Roboto';
+  --color1: #a5bcf4;
+  --color2: #c88fde;
+  --bg1: #e0cce6;
+  --bg2: #b6d1f0;
+  --textspe: #ffffff;
+  --bgspe: var(--black);
+  --lesscolor: #EBEBEB;
+  --bann: url('https://i.imgur.com/wxg6lkJ.gif');
+  --categorie: url('https://i.imgur.com/rqtNlyc.gif');
+  --titrecate: linear-gradient(90deg, white, white);
+  --footer: rgba(165, 188, 244, 0.6);
+  --scrollbar: var(--black);
+}
+
+[data-theme="dark"] {
+  --color1: #5EDB99;
+  ;
+  --color2: #9C66AA;
+  --bg1: #414141;
+  --bg2: #292929;
+  --textspe: var(--black);
+  --bgspe: #ffffff;
+  --lesscolor: #333;
+  --bann: url('https://i.imgur.com/YwNWw4D.gif');
+  --categorie: url('https://i.imgur.com/OIXxw0v.gif');
+  --titrecate: linear-gradient(90deg, #b9ffd9, #df91ff);
+  --footer: rgba(0, 0, 0, 0.5);
+  --scrollbar: linear-gradient(to top, var(--color1), var(--color2));
+}
+
+/* ------------------ GÉNÉRAL -------------------- */
+body {
+  background-image: linear-gradient(45deg, var(--bg1), var(--bg2));
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: 0 !important;
+  height: auto !important;
+  transition: all .5s;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--black);
+  color: white;
+}
+
+.boutonhautbas {
+  bottom: 50%;
+  right: 50px;
+  position: fixed;
+  z-index: 100;
+  font-size: 20px;
+}
+
+.boutonhautbas a {
+  color: white;
+}
+
+.boutonhautbas a:hover {
+  color: white;
+}
+
+.switch-mode {
+  display: flex;
+  width: auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: var(--bgspe);
+  position: fixed;
+  top: 0;
+  z-index: 99999 !important;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  border: 2px solid var(--bgspe);
+  border-radius: 34px;
+  width: 40px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  -webkit-transition: .4s;
+  transition: .4s;
+  margin: 0;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: -2px;
+  bottom: 0px;
+  background-color: var(--bgspe);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background: transparent;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(21px);
+  -ms-transform: translateX(321px);
+  transform: translateX(21px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.mentiontag {
+  background: none;
+  color: var(--black);
+  font-weight: 800;
+  transition: .6s ease-in-out;
+}
+
+.mentiontag:hover {
+  background: none;
+  color: grey !important;
+}
+
+.mentiontag:link, .mentiontag:visited {
+  color: var(--black);
+}
+
+.word-count {
+  text-align: right;
+  padding-right: 10px !important;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+/* BLOC CODE */
+dl.codebox {
+  margin: auto;
+  background: none;
+  border: none;
+  padding: 10px;
+}
+
+dl.codebox:before {
+  content: '';
+}
+
+dl.codebox code {
+  background: #fafafa !important;
+  padding: 10px;
+  border: 1px solid gainsboro;
+  margin: 0 !important;
+}
+
+dl.codebox dt {
+  width: 100%;
+  border-bottom: none;
+  text-transform: lowercase;
+  font-size: 13px;
+  font-family: var(--font1);
+  margin: 0;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.selectCode {
+  background-image: linear-gradient(to left, var(--color1), var(--color2));
+  float: right;
+  color: white;
+  font-family: var(--font2);
+  font-style: normal;
+  padding: 2px 5px;
+  font-size: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.selectCode:hover {
+  background-image: linear-gradient(to right, var(--color1), var(--color2));
+}
+
+div.cont_code {
+  clear: right;
+}
+
+/* SPOILER */
+dl.codebox.spoiler dt {
+  background: gainsboro;
+  display: inline-block;
+  width: auto;
+  padding: 0 5px;
+}
+
+.spoiler_content {
+  background: #fafafa;
+  border: 1px solid gainsboro;
+  padding: 10px;
+}
+
+/* CITATION */
+blockquote {
+  padding: 10px;
+  background: whitesmoke;
+  border-left: 4px solid gainsboro;
+  border-radius: 0;
+}
+
+blockquote:before {
+  content: '';
+}
+
+blockquote cite {
+  display: block;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: var(--font1);
+}
+
+/* ------------------ STYLES DE TEXTE ------------------ */
+b1 {
+  font-weight: bold;
+  color: var(--color1);
+  text-shadow: 1px 1px 1px #e2e2e2;
+  letter-spacing: -0.5px;
+}
+
+b2 {
+  font-weight: bold;
+  color: var(--color2);
+  text-shadow: 1px 1px 1px #e2e2e2;
+  letter-spacing: -0.5px;
+}
+
+i {
+  color: grey;
+}
+
+u1 {
+  border-bottom: 1px solid var(--color1);
+}
+
+u2 {
+  border-bottom: 1px solid var(--color2);
+}
+
+u3 {
+  background-size: 100% 40%;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(0deg, white, white);
+  padding: 0 4px;
+}
+
+mark {
+  background: var(--black);
+  color: white;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  font-weight: bold;
+  font-size: 8px;
+}
+
+t1 {
+  font-family: var(--font1);
+  font-size: 37px;
+  line-height: 56px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: lowercase;
+  -webkit-text-stroke: .8px whitesmoke;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 3px 0 var(--color1);
+}
+
+t2 {
+  font-family: var(--font1);
+  font-size: 37px;
+  line-height: 56px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: lowercase;
+  -webkit-text-stroke: .8px whitesmoke;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 3px 0 var(--color2);
+}
+
+subt {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  font-family: var(--font1);
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 27px;
+  letter-spacing: -2px;
+  position: relative;
+}
+
+subt:before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 22px;
+  background: transparent;
+  border-bottom: 1px solid silver;
+}
