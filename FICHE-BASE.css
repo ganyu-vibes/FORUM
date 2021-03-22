@@ -1,0 +1,95 @@
+/* ------------------ FICHE DE BASE -------------------- */
+.base {
+  width: 85%;
+  background: #fafafa;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid gainsboro;
+  outline: 6px solid whitesmoke;
+  text-align: justify;
+}
+
+.b-title {
+  background-image: var(--baw);
+  background-size: cover;
+  background-position: center;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.b-notice1 {
+  width: 100%;
+  background: #f1f1f1;
+  text-align: justify;
+  padding: 10px;
+  border-left: 4px solid var(--color1);
+}
+
+.b-notice2 {
+  width: 100%;
+  background: #f1f1f1;
+  text-align: justify;
+  padding: 10px;
+  border-left: 4px solid var(--color2);
+}
+
+.base a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--font1);
+  font-style: italic;
+  font-weight: 600;
+  background-size: 100% 5%;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-image: linear-gradient(90deg, var(--black), var(--black));
+  transition: background .5s, color .5s;
+  padding: 0 2px;
+}
+
+.base a:hover {
+  color: white;
+  background-size: 100% 70%;
+}
+
+.b-quote1, .b-quote2 {
+  width: 63%;
+  font-family: var(--font1);
+  margin: 0 auto;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 13px;
+}
+
+.b-quote1:before {
+  content: '❝';
+  font-size: 38px;
+  font-style: normal;
+  float: left;
+  margin: 10px 10px 0 0;
+  color: var(--color1);
+}
+
+.b-quote2:before {
+  content: '❝';
+  font-size: 38px;
+  font-style: normal;
+  float: left;
+  margin: 10px 10px 0 0;
+  color: var(--color2);
+}
+
+.b-avatars {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.b-avatars img {
+  width: 32%;
+  margin: 0 0 5px 0;
+}
