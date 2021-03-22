@@ -1,0 +1,270 @@
+/* ------------------ AFFICHAGE D'UN SUJET ------------------ */
+.suj-header-info {
+  width: 100%;
+  margin-top: 20px;
+  background-image: var(--baw);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 20px 0;
+  line-height: 24px;
+  box-shadow: 0 0 5px 0 grey;
+}
+
+.suj-header-info .suj-onetitle {
+  margin: 0;
+}
+
+.suj-header-info .suj-onetitle a {
+  color: white;
+  transition: .6s ease-in-out;
+  display: inline-block;
+  font-weight: 900 !important;
+  line-height: 24px !important;
+  width: auto;
+  text-transform: lowercase;
+  font-family: var(--font1);
+  font-style: italic;
+  font-size: 20px !important;
+  letter-spacing: 3px;
+  border-bottom: 1px solid white;
+  text-shadow: 2px 2px 0px dimgrey;
+}
+
+.suj-header-info .suj-onetitle a:hover {
+  color: var(--color1);
+}
+
+.suj-header-path {
+  color: white;
+}
+
+.suj-header-path a {
+  background: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  padding: 2px 5px;
+  font-weight: 600;
+  transition: .6s ease-in-out;
+}
+
+.suj-header-path a:hover {
+  color: var(--color2);
+  background: var(--black);
+}
+
+.post {
+  margin: 15px 0;
+  border: none;
+  box-shadow: 0 0 5px 0 grey;
+  border-radius: 0;
+  background: whitesmoke;
+  display: flex;
+}
+
+.bloc-info {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 10px 0;
+}
+
+.bloc-info .bi-name {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font1);
+  text-transform: lowercase;
+  font-weight: 900;
+  letter-spacing: -1px;
+  font-size: 21px;
+  text-shadow: 0 0 2px dimgrey;
+}
+
+.bloc-info .bi-rank {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 9px;
+  margin: -7px 0 10px 0;
+}
+
+.bloc-info .bi-avatar {
+  width: 200px;
+  height: 320px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  margin: 0 0 10px 0;
+}
+
+.bloc-info .bi-avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.bloc-info input {
+  display: none;
+}
+
+.bloc-info .bi-reveal {
+  background-image: var(--baw);
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  margin: auto;
+  display: inline-block;
+  color: white;
+  font-family: var(--font1);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 2px 0;
+  font-size: 11px;
+  border: 2px inset grey;
+  text-shadow: 2px 1px 0 var(--black);
+}
+
+.bloc-info .bi-reveal:hover {
+  cursor: pointer;
+}
+
+.bloc-info .bi-hidden {
+  width: 200px;
+  max-height: 200px;
+  overflow: auto;
+  margin-top: 10px;
+  transition: 0.6s ease-in-out;
+  padding: 7px;
+  text-align: justify;
+  line-height: 15px;
+  font-size: 12px;
+  background: gainsboro;
+}
+
+.bloc-info .bi-hidden .label {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: underline var(--color1);
+}
+
+.bloc-info .bi-hidden img {
+  max-width: 100%;
+}
+
+.bloc-info .bi-hidden hr {
+  border-top: 1px solid grey;
+}
+
+.bloc-info .bi-online {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.bloc-post {
+  width: 75%;
+  border-left: 1px solid var(--color2);
+}
+
+.bloc-post .bp-sujlink {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 9px 7px;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.bloc-post .bp-sujlink:before {
+  content: "\ec0f";
+  font-family: "honeybee";
+  margin-right: 5px;
+}
+
+.bloc-post .bp-sujlink a.bp-a {
+  text-decoration: none;
+  color: var(--color2);
+  font-weight: 900;
+  transition: 0.6s ease-in-out;
+}
+
+.bloc-post .bp-sujlink a.bp-a:hover {
+  color: var(--color1);
+}
+
+.bloc-post .bp-icons {
+  background: linear-gradient(90deg, var(--color1), var(--color2));
+  font-size: 10px;
+  padding: 7px 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloc-post .bp-icons .bp-contact {
+  display: inline-block;
+}
+
+.bloc-post .bp-icons .bp-contact a {
+  margin: 0 5px;
+}
+
+.bloc-post .bp-icons .bp-edit a {
+  text-decoration: none;
+  color: var(--black);
+  margin: 0 8px;
+  transition: 0.4s ease-in-out;
+  text-shadow: 1px 1px 0 white;
+  font-size: 14px;
+}
+
+.bloc-post .bp-icons .bp-edit a:hover {
+  color: white;
+  text-shadow: 1px 1px 0 var(--black);
+}
+
+.ion-at {
+  margin: 0 !important;
+  color: var(--black) !important;
+}
+
+.ion-at:hover {
+  cursor: pointer;
+  color: white !important;
+}
+
+.bloc-post .bp-corps {
+  width: 90%;
+  margin: 20px auto;
+  padding: 25px 30px;
+  text-align: justify;
+  background: white;
+  border: 1px solid gainsboro;
+}
+
+.signature_div {
+  padding: 0 30px 30px 30px;
+}
+
+.online:before {
+  display: none;
+}
+
+.suj-quickbox .h3 {
+  display: none;
+}
+
+#preview {
+  display: block !important;
+}
+
+#preview .postbody {
+  float: right;
+  width: 100%;
+}
+
+#preview .postbody .content {
+  padding: 45px 60px;
+}
