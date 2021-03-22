@@ -1,0 +1,231 @@
+/* ------------------- MENU AUTRE ---------------- */
+.panel {
+  background: white;
+  border-radius: 0;
+}
+
+input.inputbox, textarea.inputbox {
+  background: whitesmoke;
+  padding: 5px;
+}
+
+#cp-main h1 {
+  text-transform: lowercase;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 silver;
+}
+
+#cp-main table.table1 {
+  background: gainsboro;
+}
+
+/* ------------------ TOOLBAR ---------------------- */
+#fa_left, #fa_search, #fa_share, #fa_menu, #fa_toolbar #fa_hide {
+  display: none !important;
+}
+
+#fa_toolbar {
+  background: var(--textspe);
+  padding: 0 18px;
+}
+
+/* ------------------ NOTIFICATIONS --------------- */
+#fa_right {
+  height: 100%;
+}
+
+#fa_right a.rightHeaderLink {
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#fa_right.fa_tbMainElement a {
+  text-transform: uppercase;
+  color: black !important;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+#fa_right #fa_notifications {
+  color: var(--textspe) !important;
+  background: var(--bgspe);
+  width: 240px;
+  text-align: center;
+  font-family: var(--font1);
+  text-transform: lowercase !important;
+  font-size: 15px !important;
+  height: 100%;
+  padding-top: 5px;
+}
+
+#fa_toolbar #fa_right #fa_notifications:hover {
+  text-decoration: none;
+}
+
+a#fa_notifications {
+  font-size: 12px !important;
+  font-weight: bold !important;
+  text-transform: lowercase !important;
+  color: black !important;
+}
+
+#fa_menu:hover :visited, #fa_toolbar>#fa_right.notification>#fa_notifications {
+  background: var(--bgspe);
+  color: var(--textspe) !important;
+  font-family: var(--font1);
+  width: 240px;
+  text-align: center;
+  text-transform: lowercase !important;
+}
+
+#fa_menu #fa_menulist {
+  width: 200px;
+  text-transform: lowercase !important;
+}
+
+#fa_toolbar #fa_right #notif_list li .content {
+  width: 240px;
+}
+
+#fa_toolbar #fa_right #notif_list li .contentText {
+  float: left;
+  height: 30px !important;
+  overflow: hidden;
+  width: 210px;
+  padding: 10px 0 10px 10px;
+}
+
+#fa_toolbar #fa_right #notif_list li .contentText.ellipsis a {
+  color: black !important;
+}
+
+#fa_toolbar #fa_right.notification #notif_list {
+  display: block;
+  left: auto !important;
+  right: 18px;
+  width: 240px;
+  border: none;
+}
+
+#fa_toolbar #fa_right #notif_list li.see_all {
+  background: #000;
+  position: absolute;
+  right: 0px;
+  width: 240px;
+  text-align: center;
+}
+
+#fa_toolbar #fa_right #notif_list li.see_all a {
+  color: #ffffff !important;
+  font-size: 8px;
+}
+
+#fa_toolbar #fa_right #notif_list li a.delete {
+  background: url(https://nsm09.casimages.com/img/2019/12/14//19121401124517252816554837.png) no-repeat 50% !important;
+  float: right !important;
+  height: 16px !important;
+}
+
+#fa_toolbar #fa_right #notif_list li:first-child {
+  padding-top: 0;
+}
+
+#fa_toolbar #fa_right #notif_list li {
+  padding: 0
+}
+
+#fa_toolbar #fa_right #notif_list {
+  box-shadow: unset;
+}
+
+#fa_toolbar #fa_right #notif_list li hr {
+  margin: 0;
+}
+
+/* ------------------ HEADER -------------------- */
+#page-header {
+  width: 100%;
+}
+
+.headerbar {
+  height: auto;
+  text-align: center;
+  padding: 40px 0 20px 0;
+  background: transparent;
+}
+
+#logo {
+  box-shadow: 0 0 5px 0 grey;
+}
+
+#logo img {
+  width: 900px;
+  height: 530px;
+  background-image: var(--bann);
+  background-size: cover;
+  background-position: center;
+}
+
+/* ----------------- NAVIGATION ------------------- */
+.navbar {
+  font-family: var(--font1);
+  text-transform: uppercase;
+  font-weight: 700;
+  position: fixed;
+  top: 10px;
+  z-index: 99999 !important;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 70%;
+}
+
+.navbar a {
+  font-size: 10px;
+  letter-spacing: 1px;
+  border-radius: 0;
+  padding: 4px;
+  margin: 0 7px;
+  text-shadow: 1px 1px 0px grey;
+  border-bottom: 1px solid transparent;
+  color: var(--bgspe);
+}
+
+.navbar a:hover {
+  color: var(--bgspe);
+  background: none;
+  border-bottom: 1px solid var(--bgspe);
+  box-shadow: 0 0 0 0 black;
+}
+
+.navbar img {
+  display: none;
+}
+
+a[href="/faq"] {
+  display: none !important;
+}
+
+a[href="/calendar"] {
+  display: none !important;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+/* ----------------- CONTAINER -------------------- */
+#wrap {
+  background: transparent;
+  max-width: 900px;
+  padding: 0;
+}
+
+/* ------------------ FOOTER --------------- */
+#pagefooter {
+  background: var(--footer);
+}
+
+.copyright-body {
+  border-color: white;
+}
