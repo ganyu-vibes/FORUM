@@ -1,37 +1,10 @@
-/* ---------------- FONTS -------------- */
-@font-face {
-  font-family: 'Bodoni';
-  font-style: normal;
-  font-weight: normal;
-  src: url('https://dl.dropboxusercontent.com/s/e06e5vx5ksjb575/BodoniFLF-Roman.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Bodoni';
-  font-style: italic;
-  font-weight: normal;
-  src: url('https://dl.dropboxusercontent.com/s/s3tv0lqgxlb3hna/BodoniFLF-Italic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Bodoni';
-  font-style: normal;
-  font-weight: bold;
-  src: url('https://dl.dropboxusercontent.com/s/csatu99j9g4og2w/BodoniFLF-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Bodoni';
-  font-style: italic;
-  font-weight: bold;
-  src: url('https://dl.dropboxusercontent.com/s/d7iduof7nkmcjfk/BodoniFLF-BoldItalic.ttf') format('truetype');
-}
-
-/* -------------------- LES VARIABLES ---------------- */
+/* ----------------------------------------------- */
+/*                  LES VARIABLES                  */
+/* ----------------------------------------------- */
 :root {
   --baw: url('https://i.imgur.com/Xn3pNJo.jpg');
-  --font1: 'Bodoni';
-  --font2: 'Roboto';
+  --font1: 'Xanh Mono';
+  --font2: 'Inter';
   --black: #1e1e1e;
   --color1: #a5bcf4;
   --color2: #c88fde;
@@ -63,7 +36,9 @@
   --scrollbar: linear-gradient(to top, var(--color1), var(--color2));
 }
 
-/* ------------------ GÉNÉRAL -------------------- */
+/* ----------------------------------------------- */
+/*                     GÉNÉRAL                     */
+/* ----------------------------------------------- */
 body {
   background-image: linear-gradient(45deg, var(--bg1), var(--bg2));
   background-size: cover;
@@ -291,7 +266,9 @@ blockquote cite {
   font-family: var(--font1);
 }
 
-/* ------------------ STYLES DE TEXTE ------------------ */
+/* ----------------------------------------------- */
+/*                STYLES DE TEXTE                  */
+/* ----------------------------------------------- */
 b1 {
   font-weight: bold;
   color: var(--color1);
