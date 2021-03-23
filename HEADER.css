@@ -29,7 +29,7 @@ input.inputbox, textarea.inputbox {
 }
 
 #fa_toolbar {
-  background: var(--textspe);
+  background: var(--text-color);
   padding: 0 18px;
 }
 
@@ -54,8 +54,8 @@ input.inputbox, textarea.inputbox {
 }
 
 #fa_right #fa_notifications {
-  color: var(--textspe) !important;
-  background: var(--bgspe);
+  color: var(--text-color) !important;
+  background: var(--bg-color);
   width: 240px;
   text-align: center;
   font-family: var(--font1);
@@ -77,8 +77,8 @@ a#fa_notifications {
 }
 
 #fa_menu:hover :visited, #fa_toolbar>#fa_right.notification>#fa_notifications {
-  background: var(--bgspe);
-  color: var(--textspe) !important;
+  background: var(--bg-color);
+  color: var(--text-color) !important;
   font-family: var(--font1);
   width: 240px;
   text-align: center;
@@ -198,13 +198,13 @@ a#fa_notifications {
   margin: 0 7px;
   text-shadow: 1px 1px 0px grey;
   border-bottom: 1px solid transparent;
-  color: var(--bgspe);
+  color: var(--bg-color);
 }
 
 .navbar a:hover {
-  color: var(--bgspe);
+  color: var(--bg-color);
   background: none;
-  border-bottom: 1px solid var(--bgspe);
+  border-bottom: 1px solid var(--bg-color);
   box-shadow: 0 0 0 0 black;
 }
 

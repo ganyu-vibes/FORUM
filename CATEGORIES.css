@@ -1,4 +1,6 @@
-/* ------------------ CATÉGORIES ------------------ */
+/* ----------------------------------------------- */
+/*                    CATEGORIES                   */
+/* ----------------------------------------------- */
 .forabg {
   background: none;
   box-shadow: unset;
@@ -9,6 +11,7 @@
   background: none;
 }
 
+/* BLOC TITRE CATEGORIE */
 .header {
   background-image: var(--categorie);
   background-size: cover;
@@ -17,6 +20,7 @@
   box-shadow: 0 0 5px 0 grey;
 }
 
+/* TEXTE TITRE CATEGORIE */
 .table-title h2, .table-title h1 {
   display: inline-block;
   font-weight: bold;
@@ -35,6 +39,7 @@
   padding: 0 5px;
 }
 
+/* BOUTONS COLLAPSE */
 .btn-collapse {
   top: 26px;
 }
@@ -43,6 +48,7 @@
   color: var(--black);
 }
 
+/* LISTE DE FORUMS */
 ul.forums {
   border-radius: 0;
 }
@@ -52,12 +58,12 @@ ul.topiclist li {
   margin-bottom: 5px;
 }
 
-li.catrow {}
-
+/* SCROLLBAR CATEGORIE */
 #cat ::-webkit-scrollbar {
   display: none;
 }
 
+/* UN FORUM */
 #cat {
   width: 900px;
   height: 140px;

@@ -1,4 +1,6 @@
-/* ----------------- PROFIL VERSION 3 ----------------- */
+/* ----------------------------------------------- */
+/*                       PROFIL                    */
+/* ----------------------------------------------- */
 #patronus-3 {
   width: 900px;
   height: 430px;
@@ -48,7 +50,7 @@
   height: 120px;
   object-fit: cover;
   border-radius: 100%;
-  border: 10px solid var(--textspe);
+  border: 10px solid var(--text-color);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   position: relative;
@@ -57,8 +59,8 @@
 .po3-details {
   width: 100%;
   height: 50%;
-  background: var(--textspe);
-  color: var(--bgspe);
+  background: var(--text-color);
+  color: var(--bg-color);
   padding: 15px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   overflow: auto;
@@ -75,7 +77,7 @@
 
 .po3-details .po3-label {
   display: inline-block;
-  background: var(--lesscolor);
+  background: var(--soft-color);
   text-transform: uppercase;
   color: var(--color2);
   font-size: 9px;
@@ -93,7 +95,7 @@
 .po3-quote {
   width: 100%;
   height: 12%;
-  color: var(--bgspe);
+  color: var(--bg-color);
   font-family: var(--font1);
   padding: 0 20px;
   font-style: italic;
@@ -101,7 +103,7 @@
   font-size: 17px;
   line-height: 12px;
   font-weight: bold;
-  text-shadow: 1px 1px 0 var(--textspe);
+  text-shadow: 1px 1px 0 var(--text-color);
   letter-spacing: -1px;
   text-align: center;
   display: flex;
@@ -138,7 +140,7 @@
 .po3-name {
   width: 100%;
   text-align: center;
-  background: var(--textspe);
+  background: var(--text-color);
   padding: 15px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
@@ -161,10 +163,10 @@
   display: block;
   text-transform: uppercase;
   font-size: 9px;
-  border-top: 1px dashed var(--lesscolor);
+  border-top: 1px dashed var(--soft-color);
   padding-top: 5px;
   margin-top: 5px;
-  color: var(--bgspe);
+  color: var(--bg-color);
 }
 
 .po3-avatar {
@@ -192,16 +194,16 @@
   text-align: center;
   font-size: 11px;
   text-transform: uppercase;
-  color: var(--bgspe);
+  color: var(--bg-color);
   font-weight: bold;
   letter-spacing: -1px;
-  border-bottom: 1px solid var(--textspe);
+  border-bottom: 1px solid var(--text-color);
   padding: 0 15px 5px 15px;
   display: inline-block;
 }
 
 .po3-online span {
-  color: var(--bgspe) !important;
+  color: var(--bg-color) !important;
 }
 
 .po3-visite {
@@ -238,11 +240,11 @@
 
 .po3-sujmsg a,
 .po3-sujouv a {
-  background: var(--textspe);
+  background: var(--text-color);
   font-size: 9px;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--bgspe);
+  color: var(--bg-color);
   letter-spacing: 1px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   font-weight: bold;
@@ -251,8 +253,8 @@
 
 .po3-sujmsg a:hover,
 .po3-sujouv a:hover {
-  background: var(--bgspe);
-  color: var(--textspe);
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .po3-tags {
@@ -265,7 +267,7 @@
   font-weight: 800;
   letter-spacing: -1px;
   padding: 0 20px;
-  color: var(--bgspe);
+  color: var(--bg-color);
 }
 
 .po3-tags #field_id3, .po3-tags #field_id1, .po3-tags #field_id4 {
@@ -293,7 +295,7 @@
   box-sizing: border-box;
   height: 170px;
   object-fit: cover;
-  border: 10px solid var(--textspe);
+  border: 10px solid var(--text-color);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
