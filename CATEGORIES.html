@@ -1,0 +1,143 @@
+<!-- BEGIN catrow -->
+<!-- BEGIN tablehead -->
+<div class="po-1categorie" id="{catrow.tablehead.ID}">
+
+  <div class="po-cat-titre"><span>{catrow.tablehead.L_FORUM}</span></div>
+  <!-- END tablehead -->
+
+  <!-- BEGIN forumrow -->
+  <div class="po-1forum" id="{catrow.forumrow.FORUM_NAME}">
+    <div class="po-fo-window"><span class="th th-circle"></span><span class="th th-circle"></span><span class="th th-circle"></span><span class="th th-cross"></span></div>
+    <div class="po-fo-content">
+      <div class="po-fo-title"><span><a href="{catrow.forumrow.U_VIEWFORUM}">{catrow.forumrow.FORUM_NAME}</a></span></div>
+      <div class="po-fo-lastava">
+        <!-- BEGIN avatar -->
+        <span>{catrow.forumrow.avatar.LAST_POST_AVATAR}</span>
+        <!-- END avatar -->
+      </div>
+      <div class="po-fo-lastmsg">
+        <div class="po-fo-lastmsg-title">last file saved</div>
+        <div class="po-fo-lastmsg-content">
+          <!-- BEGIN switch_topic_title -->
+          <a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">{catrow.forumrow.LATEST_TOPIC_NAME}</a><br />
+          <!-- END switch_topic_title -->
+          {catrow.forumrow.USER_LAST_POST}
+        </div>
+      </div>
+      <div class="po-fo-numbers">
+        <div class="po-fo-numbers-suj">
+          <n>{catrow.forumrow.TOPICS}</n><br />sujets
+        </div>
+        <div class="po-fo-numbers-msg">
+          <n>{catrow.forumrow.POSTS}</n><br />messages
+        </div>
+      </div>
+    </div>
+    <div class="po-fo-subfo">directories : {catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}</div>
+    <script type="text/javascript">
+      //<![CDATA[
+      $('.po-fo-subfo').each(function() {
+        $(this).html($(this).html().replace(/>, /g, ">"));
+      });
+      //]]>
+    </script>
+    <div class="po-fo-underpage"></div>
+  </div>
+  <!-- END forumrow -->
+  <!-- BEGIN tablefoot -->
+</div>
+<!-- END tablefoot -->
+<!-- END catrow -->
+
+<script type="text/javascript">
+  //<![CDATA[
+  $(document).ready(function() {
+    var btn_collapse = $('<div></div>', {
+      class: 'btn-collapse'
+    });
+
+    var btn_collapse_show = $('<i></i>', {
+      class: 'ion-android-add-circle hidden',
+      'data-tooltip': '{L_EXPEND_CAT}'
+    }).appendTo(btn_collapse);
+
+    var btn_collapse_hide = $('<i></i>', {
+      class: 'ion-android-remove-circle',
+      'data-tooltip': '{L_HIDE_CAT}'
+    }).appendTo(btn_collapse);
+
+    var collapsed = [];
+
+    if (readCookie('collapsed') != null && readCookie('collapsed') != '') {
+      collapsed = readCookie('collapsed').split(',');
+    }
+
+    $(document).on('click', '.btn-collapse', function() {
+      $(this).children('.ion-android-add-circle').toggleClass('hidden');
+      $(this).children('.ion-android-remove-circle').toggleClass('hidden');
+      $(this).parents('.po-1categorie').toggleClass('hidden');
+
+      if (readCookie('collapsed') != null && readCookie('collapsed') != '') {
+        collapsed = readCookie('collapsed').split(',');
+      }
+
+      if (!$(this).parents('.po-1categorie').hasClass('hidden')) {
+        removeFromArray('' + $(this).parents('.po-1categorie').data('cindex'), collapsed);
+
+        createCookie('collapsed', collapsed);
+      } else {
+        collapsed.push('' + $(this).parents('.po-1categorie').data('cindex'));
+
+        createCookie('collapsed', collapsed);
+      }
+    });
+
+    $('.po-1categorie').each(function(i) {
+      $(this).data('cindex', '' + i);
+
+      $(btn_collapse)
+        .clone()
+        .attr('id', 'po-1categorie' + i)
+        .appendTo($(this).find('.header'));
+
+      if ($.inArray('' + i, collapsed) > -1) {
+        $(this).toggleClass('hidden');
+        $('#po-1categorie' + i).children('.ion-android-add-circle').toggleClass('hidden');
+        $('#po-1categorie' + i).children('.ion-android-remove-circle').toggleClass('hidden');
+      }
+    });
+  });
+
+  function removeFromArray(item, array) {
+    var i = array.indexOf(item);
+
+    if (i > -1) {
+      array = array.splice(i, 1);
+    }
+  }
+
+  function createCookie(name, value, days) {
+    var expires;
+
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toGMTString();
+    } else {
+      expires = "";
+    }
+    document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+  }
+
+  function readCookie(name) {
+    var nameEQ = encodeURIComponent(name) + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+    }
+    return null;
+  }
+  //]]>
+</script>
