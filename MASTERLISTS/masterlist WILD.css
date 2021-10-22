@@ -1,0 +1,235 @@
+/* LES OUTILS
+
+$c1: #bec1d9; //couleur foncée
+$c2: #f4b3de; //couleur claire
+$f1: "Playfair Display";
+$f2: "Open Sans";
+$g1: linear-gradient(90deg, $c1, $c2); // horizontal, f to c
+$g2: linear-gradient(90deg, $c2, $c1); // horizontal, c to f
+$g3: linear-gradient(180deg, $c1, $c2); // vertical, f to c
+$g4: linear-gradient(180deg, $c2, $c1); // vertical, c to f
+$g5: linear-gradient(45deg, $c2, $c1); // diagonale, c to f
+
+background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%); */
+
+:root {
+  --c1: #858EBE; /* couleur foncée */
+  --c2: #f860a0; /* couleur claire */
+  --c3: #bec1d9;
+  --c4: #f4b3de;
+  --f1: 'Playfair Display';
+  --f2: 'Open Sans';
+  --gradient3: linear-gradient(90deg, var(--c3), var(--c4));
+  --gradient4: linear-gradient(90deg, var(--c4), var(--c3));
+  --gradient5: linear-gradient(180deg, var(--c3), var(--c4));
+  --gradient6: linear-gradient(180deg, var(--c4), var(--c3));
+  --gradient7: linear-gradient(45deg, var(--c4), var(--c3));
+}
+
+/* LA BASE & GENERAL */
+
+#wild {
+  width: 500px;
+  height: 570px;
+  background: whitesmoke;
+  font-family: var(--f2);
+  font-size: 11px;
+  color: black;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid gainsboro;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+#wild div {
+  box-sizing: border-box;
+}
+
+/* SCROLLBARS */
+
+#wild ::-webkit-scrollbar {
+  width: 3px !important;
+}
+#wild ::-webkit-scrollbar-thumb {
+  background: var(--gradient5) !important;
+}
+#wild ::-webkit-scrollbar-track {
+  background: none !important;
+}
+
+/* EFFETS DE TEXTE */
+
+#wild a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 0 3px;
+  background-size: 100% 35%;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-image: var(--gradient4);
+  transition: background 0.3s;
+}
+
+#wild a:hover {
+  background-size: 100% 100%;
+}
+
+#wild b {
+  color: var(--c4);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+#wild i {
+  color: #888;
+}
+
+#wild u {
+  color: var(--c3);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+#wild title {
+  font-family: var(--f1);
+  font-size: 13px;
+	font-weight: 700;
+  display: block;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #bebebe;
+}
+
+#wild ce {
+  color: var(--c2);
+  font-style: italic;
+  text-shadow: 1px 1px 0 black;
+}
+
+#wild sa {
+  color: var(--c1);
+  font-style: italic;
+  text-shadow: 1px 1px 0 black;
+}
+
+/* TITRE */
+
+#wild .title {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 7px;
+  background: white;
+  border-bottom: 1px solid gainsboro;
+}
+
+#wild .title sp {
+  font-family: var(--f1);
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: var(--gradient3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#wild .title sp:before {
+  content: '*+:｡.｡';
+  font-size: 17px;
+}
+
+#wild .title sp:after {
+  content: '｡.｡:+*';
+  margin-left: 5px;
+  font-size: 17px;
+}
+
+#wild .title sub {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 9px;
+  margin-top: -5px;
+}
+
+/* TEXTE DESCRIPTION */
+
+#wild .txt {
+  width: 93%;
+  background: #e6e6e6;
+  margin: 10px 0;
+  padding: 6px;
+  border-radius: 3px;
+  border-left: 4px solid var(--c3);
+}
+
+/* TABS SYSTEM */
+
+#wild input {
+	display: none;
+}
+
+#wild label {
+  width: 30%;
+  margin: 0 5px;
+  text-align: center;
+  padding: 4px;
+  font-family: var(--f1);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  border: 1px dashed white;
+}
+
+#wild label[for=ma1] {
+  background: var(--c3);
+}
+
+#wild label[for=ma2] {
+  background: var(--c4);
+}
+
+#wild label:hover {
+  cursor: pointer;
+}
+
+#wild .wrap {
+	width: 93%;
+  height: 300px;
+  position: absolute;
+  top: 260px;
+}
+
+#wild #ma1:checked+label ~ .wrap .avatars:nth-child(1) { opacity: 1; z-index: 3; }
+#wild #ma2:checked+label ~ .wrap .avatars:nth-child(2) { opacity: 1; z-index: 3; }
+
+/* BLOCS AVATARS */
+
+#wild .wrap .avatars {
+  width: 100%;
+  height: 100%;
+  margin: 0 3px 10px 3px;
+  border-radius: 3px;
+  overflow: auto;
+  text-align: justify;
+  text-transform: lowercase;
+  padding: 6px;
+	position: absolute;
+	transition: 1s ease-in-out;
+	opacity: 0;
+}
+
+#wild .vava:before {
+  content: '☆';
+  font-size: 11px;
+}
+
+#wild .wrap .avatars mm {
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -1px;
+}

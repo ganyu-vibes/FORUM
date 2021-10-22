@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "Bodoni";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://dl.dropboxusercontent.com/s/e06e5vx5ksjb575/BodoniFLF-Roman.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Bodoni";
+  font-style: italic;
+  font-weight: normal;
+  src: url("https://dl.dropboxusercontent.com/s/s3tv0lqgxlb3hna/BodoniFLF-Italic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Bodoni";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://dl.dropboxusercontent.com/s/csatu99j9g4og2w/BodoniFLF-Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Bodoni";
+  font-style: italic;
+  font-weight: bold;
+  src: url("https://dl.dropboxusercontent.com/s/d7iduof7nkmcjfk/BodoniFLF-BoldItalic.ttf")
+    format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --baw: url(https://i.imgur.com/Xn3pNJo.jpg);
+  --black: #1e1e1e;
+  --font1: "Bodoni";
+  --font2: "Roboto";
+  --color1: #a5bcf4;
+  --color2: #c88fde;
+  --bg1: #e0cce6;
+  --bg2: #b6d1f0;
+  --textnotif: white;
+  --bgnotif: var(--black);
+  --bann: url(https://i.imgur.com/wxg6lkJ.gif);
+  --categorie: url(https://i.imgur.com/rqtNlyc.gif);
+  --titrecate: linear-gradient(90deg, white, white);
+  --footer: rgba(165, 188, 244, 0.6);
+  --scrollbar: var(--black);
+}
+
+body {
+  background-image: linear-gradient(45deg, var(--bg1), var(--bg2));
+  background-size: cover;
+  padding: 50px;
+}
+
+body div {
+  box-sizing: border-box;
+}
+
+#patronus-3 {
+  width: 900px;
+  height: 430px;
+  margin: auto;
+  background: none;
+  color: var(--black);
+  font-family: var(--font2);
+  line-height: 1.15;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* BLOC 1 DU PROFIL */
+.po3-profil1 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  position: relative;
+}
+
+.po3-bar {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left, var(--color1), var(--color2));
+  position: absolute;
+  top: 60px;
+  z-index: -1;
+}
+
+.po3-icon {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+}
+
+.po3-icon img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 10px solid white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.po3-details {
+  width: 100%;
+  height: 50%;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  text-align: justify;
+}
+
+.po3-details div {
+  width: 100%;
+}
+
+.po3-details .po3-label {
+  display: inline-block;
+  background: whitesmoke;
+  text-transform: uppercase;
+  color: var(--color2);
+  font-size: 9px;
+  letter-spacing: 1px;
+  height: auto;
+  padding: 1px 5px 0 5px;
+}
+
+.po3-details .field_uneditable {
+  display: inline-block;
+  width: auto;
+  font-size: 11px;
+}
+
+.po3-quote {
+  width: 100%;
+  height: 12%;
+  color: var(--black);
+  font-family: var(--font1);
+  padding: 0 20px;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 17px;
+  line-height: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 white;
+  letter-spacing: -1px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.po3-quote .th-quote-up {
+  position: absolute;
+  font-size: 65px;
+  mix-blend-mode: multiply;
+  color: var(--color1);
+  z-index: -1;
+  text-shadow: none;
+}
+
+/* BLOC 2 DU PROFIL */
+.po3-profil2 {
+  width: 24%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.po3-name {
+  width: 100%;
+  text-align: center;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.po3-name span {
+  font-size: 30px;
+  background: -webkit-linear-gradient(90deg, var(--color1), var(--color2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.po3-name pseudo {
+  font-family: var(--font1);
+  font-weight: bold;
+  letter-spacing: -2px;
+  line-height: 28px;
+}
+
+.po3-name prank {
+  display: block;
+  text-transform: uppercase;
+  font-size: 9px;
+  border-top: 1px dashed lightgrey;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+.po3-avatar {
+  width: 100%;
+  background: linear-gradient(45deg, var(--color1), var(--color2));
+  padding: 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.po3-avatar img {
+  width: 100%;
+}
+
+/* BLOC 3 DU PROFIL */
+.po3-profil3 {
+  width: 32%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.po3-online {
+  width: auto;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -1px;
+  border-bottom: 1px solid white;
+  padding: 0 15px 5px 15px;
+  display: inline-block;
+}
+
+.po3-visite {
+  width: 100%;
+  color: white;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.po3-sujmsg {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.po3-sujmsg a {
+  width: auto;
+  padding: 7px 44px;
+}
+
+.po3-sujouv {
+  width: 100%;
+  background: black;
+  display: flex;
+}
+
+.po3-sujouv a {
+  width: 100%;
+  text-align: center;
+  padding: 7px 0;
+}
+
+.po3-sujmsg a,
+.po3-sujouv a {
+  background: white;
+  font-size: 9px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+}
+
+.po3-sujmsg a:hover,
+.po3-sujouv a:hover {
+  background: var(--black);
+  color: white;
+}
+
+.po3-tags {
+  width: 100%;
+  max-height: 10%;
+  overflow: auto;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -1px;
+  padding: 0 20px;
+}
+
+.po3-gifside {
+  width: 100%;
+}
+
+.po3-gifside img {
+  width: 100%;
+  box-sizing: border-box;
+  height: 170px;
+  object-fit: cover;
+  border: 10px solid white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.po3-contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* SCROLLBAR DETAILS */
+#patronus-3 .po3-details::-webkit-scrollbar {
+  width: 5px;
+}
+
+#patronus-3 .po3-details::-webkit-scrollbar-track {
+  background: #ebebeb;
+}
+
+#patronus-3 .po3-details::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* SCROLLBAR TAGS */
+#patronus-3 .po3-tags::-webkit-scrollbar {
+  width: 5px;
+}
+
+#patronus-3 .po3-tags::-webkit-scrollbar-track {
+  background: none;
+}
+
+#patronus-3 .po3-tags::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color1), var(--color2));
+}

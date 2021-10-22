@@ -1,0 +1,252 @@
+//TO DELETE
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800|Playfair+Display:400,700&display=swap");
+
+body {
+  font-family: "Open Sans" !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  background-image: linear-gradient(45deg, var(--c3), var(--c4));
+}
+
+:root {
+  --c1: #858ebe;
+  /* couleur foncée */
+  --c2: #f860a0;
+  /* couleur claire */
+  --c3: #bec1d9;
+  /* couleur foncée pale */
+  --c4: #f4b3de;
+  /* couleur claire pale */
+  --f1: "Playfair Display";
+  /* accent font */
+  --f2: "Open Sans";
+  /* principal font */
+}
+
+.wrap {
+  width: 800px;
+  background: white;
+  margin: auto;
+}
+
+/* LE WRAPPER */
+#LDS {
+  width: 99%;
+  background: none;
+  margin: auto;
+}
+
+#LDS div {
+  box-sizing: border-box;
+}
+
+/* PAGINATION */
+#LDS .pagination {
+  //A SUPP
+  width: 100%;
+  text-align: right;
+  //A SUPP
+  background: none !important;
+}
+
+/* LIBELLE SUJETS */
+#LDS .libelle_sujets {
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(90deg, var(--c1), var(--c2));
+  color: white;
+  font-family: var(--f1);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  border: 3px double white;
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 2px grey;
+}
+
+#LDS .libelle_sujets:before {
+  content: "―――";
+  margin-right: 10px;
+}
+
+#LDS .libelle_sujets:after {
+  content: "―――";
+  margin-left: 10px;
+}
+
+/* TOPIC EN GENERAL */
+#LDS .topic {
+  width: 100%;
+  height: 56px;
+  background: whitesmoke;
+  border: 1px solid gainsboro;
+  margin: 2px auto;
+  padding: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+/* TOPIC ANNONCE */
+#LDS .annonce #title .linksuj strong {
+  margin-right: 3px;
+  text-transform: uppercase;
+  font-size: 9px;
+  position: relative;
+  padding: 0 2px;
+  background-size: 100% 35%;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-image: linear-gradient(-90deg, var(--c1), var(--c2));
+  transition: background .3s;
+}
+
+/* NVX MSG, PAS DE NVX MSG */
+#LDS .topic .msgstatus img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  object-fit: cover;
+  padding: 3px;
+  border: 1px dashed grey;
+}
+
+/* BLOC LIEN DU SUJET */
+#LDS .topic #title {
+  width: 60%;
+  height: 90%;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid white;
+}
+
+#LDS .topic #title .linksuj {
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+
+#LDS .topic #title .linksuj a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  font-family: var(--f1);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+#LDS .topic #title .linksuj a:before, #LDS .topic #title .linksuj a:after {
+  font-weight: bold;
+  display: inline-block;
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.3s;
+  font-family: var(--f2);
+}
+
+#LDS .topic #title .linksuj a:before {
+  content: "[";
+  color: var(--c1);
+  margin-right: 4px;
+  transform: translateX(20px);
+}
+
+#LDS .topic #title .linksuj a:after {
+  content: "]";
+  color: var(--c2);
+  margin-left: 4px;
+  transform: translateX(-20px);
+}
+
+#LDS .topic #title .linksuj a:hover::before,
+#LDS .topic #title .linksuj a:hover::after,
+#LDS .topic #title .linksuj a:focus::before,
+#LDS .topic #title .linksuj a:focus::after {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+#LDS .topic #title .linksuj img {
+  margin-right: 4px;
+}
+
+#LDS .topic #title .desc {
+  width: 100%;
+  font-size: 9px;
+  margin-top: -7px;
+}
+
+/* DERNIER POSTEUR VAVA */
+#LDS .topic .lastvava {
+  width: 48px;
+  height: 48px;
+  padding: 3px;
+  border-radius: 100px;
+  border: 1px dashed grey;
+}
+
+#LDS .topic .lastvava img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+  filter: grayscale(1);
+  transition: 1s;
+}
+
+#LDS .topic .lastvava img:hover {
+  filter: none;
+}
+
+//STATISTIQUES
+#LDS .topic #numbers {
+  width: 8%;
+  height: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+#LDS .topic #numbers .suj, #LDS .topic #numbers .msg {
+  width: 100%;
+  height: 46%;
+  font-size: 9px;
+  text-align: center;
+  line-height: 10px;
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid silver;
+}
+
+#LDS .topic #numbers n {
+  font-weight: 800;
+}
+
+/* DERNIER MESSAGE */
+#LDS .topic .lastmsg {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 9px;
+  line-height: 11px;
+  width: 17%;
+  height: 95%;
+  background: white;
+  border: 1px solid gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NO TOPIC */
+#LDS #notopic {
+  width: 100%;
+  background: whitesmoke;
+  border: 1px solid gainsboro;
+  text-align: center;
+  padding: 7px;
+}

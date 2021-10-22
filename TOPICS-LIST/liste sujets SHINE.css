@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,900&family=Roboto:wght@400;500;700;900&display=swap");
+
+:root {
+  --color1: #f4b5d4;
+  --color2: #8d74bd;
+  --black: #1e1e1e;
+  --font1: "Playfair Display";
+  --font2: "Roboto";
+}
+
+body {
+  background-image: linear-gradient(45deg, #8d74bd, #f4b5d4);
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  padding: 30px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body div {
+  box-sizing: border-box;
+}
+
+#suj {
+  width: 900px;
+  margin: 10px auto;
+  background: white;
+  height: 70px;
+  font-size: 12px;
+  border-left: 5px solid var(--color2);
+  border-right: 5px solid var(--color1);
+  box-shadow: 0 0 3px 0 grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.suj-new {
+  width: 7%;
+  height: 80%;
+}
+
+.suj-new img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.suj-link {
+  width: 47%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.suj-link .suj-linktitle {
+  display: flex;
+  align-items: center;
+}
+
+.suj-link .suj-linktitle img {
+  margin-right: 6px;
+}
+
+.suj-link .suj-linktitle strong {
+  text-transform: uppercase;
+  margin-right: 6px;
+  font-size: 10px;
+  background-image: linear-gradient(90deg, var(--color1), var(--color2));
+  padding: 3px 6px;
+  text-shadow: 1px 1px 0 silver;
+}
+
+.suj-link .suj-linktitle a {
+  margin-right: 6px;
+  font-family: var(--font1);
+  text-decoration: none;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--black);
+  letter-spacing: -0.5px;
+  text-shadow: 1px 1px 0 lightgrey;
+  transition: 0.6s ease-in-out;
+  text-transform: lowercase;
+  font-size: 14px;
+}
+
+.suj-link .suj-linktitle a:hover {
+  color: black;
+}
+
+.suj-link .suj-author a {
+  text-transform: lowercase;
+  font-weight: 600;
+}
+
+.suj-link .suj-desc {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 500;
+  color: silver;
+}
+
+.suj-numbers {
+  height: 100%;
+  width: 12%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+.suj-numbers .suj-vue,
+.suj-msg {
+  width: 100%;
+  padding: 4px 0;
+  border: 3px double white;
+}
+
+.suj-numbers .suj-vue {
+  background: var(--color1);
+}
+
+.suj-numbers .suj-msg {
+  background: var(--color2);
+}
+
+.suj-vava {
+  width: 7%;
+  height: 80%;
+  background-image: linear-gradient(45deg, var(--color2), var(--color1));
+  padding: 4px;
+}
+
+.suj-vava img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.suj-lastmsg {
+  width: 18%;
+  height: 100%;
+  display: table;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.suj-lastmsg span {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.suj-lastmsg a {
+  text-transform: lowercase;
+  font-size: 12px;
+}

@@ -1,0 +1,237 @@
+/* TO DELETE */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Playfair+Display:400,700,900&display=swap');
+
+body {
+  font-family: 'Roboto'!important;
+  font-size: 11px!important;
+  line-height: 14px!important;
+  background-image: linear-gradient(45deg, var(--c3), var(--c4));
+}
+
+:root {
+  --c1: #858EBE; /* couleur foncée */
+  --c2: #f860a0; /* couleur claire */
+  --c3: #bec1d9; /* couleur foncée pale */
+  --c4: #f4b3de; /* couleur claire pale */
+
+  --f1: 'Playfair Display'; /* accent font */
+  --f2: 'Roboto';
+}
+
+.entirepage {
+  width: 800px;
+  background: white;
+  margin: auto;
+}
+
+/* PROFIL */
+
+#profil {
+  width: 98%;
+  height: 450px;
+  position: relative;
+  margin: auto;
+  padding: 8px;
+  box-sizing: border-box;
+  background: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#profil div {
+  box-sizing: border-box;
+}
+
+/* PROFIL SECTION 1 */
+
+#profil #profil-1 {
+  width: 65%;
+  height: 100%;
+}
+
+/* le nom/pseudo */
+
+#profil #profil-1 .name {
+  width: 100%;
+  background-image: url(https://nsm09.casimages.com/img/2019/12/14//19121405293617252816556246.png);
+  background-size: cover;
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--c4);
+
+}
+
+#profil #profil-1 .name pseudo {
+  font-family: var(--f1);
+  font-size: 35px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  padding-right: 2px;
+  background: linear-gradient(90deg, var(--c3), var(--c4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 2s ease;
+}
+
+#profil #profil-1 .name:hover pseudo {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  background: none;
+}
+
+#profil #profil-1 .name .rank {
+  background: white;
+  margin-top: 10px;
+  padding: 1px 5px;
+  display: inline-block;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 9px;
+}
+
+/* les info et les liens */
+
+#profil #profil-1 .stuff {
+  width: 100%;
+  height: calc(100% - 70px);
+  background: white;
+  border-left: 1px solid var(--c3);
+  border-bottom: 1px solid var(--c4);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#profil #profil-1 .stuff .info {
+  width: 55%;
+  height: 100%;
+}
+
+#profil #profil-1 .stuff .info #field_id1 .gen {
+  display: none;
+}
+
+#profil #profil-1 .stuff .info #field_id1 img {
+  display: none;
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  position: absolute;
+  bottom: 40px;
+  left: 320px;
+}
+
+#profil #profil-1 .stuff .liens {
+  width: 45%;
+  height: 100%;
+  border-left: 1px solid silver;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#profil #profil-1 .stuff .liens .online {
+  font-family: var(--f1);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 2px dashed var(--c4);
+  text-transform: lowercase;
+}
+
+#profil #profil-1 .stuff .liens .bunch {
+  line-height: 17px;
+}
+
+#profil #profil-1 .stuff .liens .bunch a {
+  display: inline-block;
+  color: grey;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+#profil #profil-1 .stuff .liens .bunch a:hover {
+  background: linear-gradient(90deg, var(--c3), var(--c4));
+  color: black;
+}
+
+#profil #profil-1 .stuff .liens .contacts tit {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-bottom: 2px solid var(--c1);
+  margin-bottom: 4px;
+}
+
+#profil #profil-1 .stuff .liens .image {
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px dashed black;
+  background: linear-gradient(45deg, var(--c3), var(--c4));
+  width: 160px;
+  height: 110px;
+}
+
+/* PROFIL SECTION 2 */
+
+#profil #profil-2 {
+  width: 35%;
+  height: 100%;
+  border-left: 1px solid black;
+}
+
+#profil #profil-2 .avatar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--c1), var(--c2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profil #profil-2 .avatar img {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  transition: .7s ease-in-out;
+}
+
+#profil #profil-2 .avatar .overlay {
+  position: absolute;
+  top: 65px;
+  right: 42px;
+  width: 200px;
+  height: 320px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 2;
+  transition: .7s ease-in-out;
+  opacity: 0;
+}
+
+#profil #profil-2 .avatar .overlay ww {
+  font-weight: 900;
+  border-bottom: 2px solid var(--c3);
+}
+
+#profil #profil-2 .avatar:hover .overlay {
+  opacity: 1;
+}
+
+#profil #profil-2 .avatar:hover img {
+  filter: grayscale(1);
+}

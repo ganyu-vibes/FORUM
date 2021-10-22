@@ -1,0 +1,159 @@
+<head>
+	<link href="catégorie TOY.css" rel="stylesheet">
+</head>
+
+<!-- BEGIN catrow -->
+<!-- BEGIN tablehead -->
+<div class="forabg" id="{catrow.tablehead.ID}">
+	<ul class="topiclist">
+		<li class="header">
+			<dl class="icon">
+				<div class="table-title">{catrow.tablehead.L_FORUM}</div>
+			</dl>
+		</li>
+	</ul>
+	<ul class="topiclist forums">
+		<!-- END tablehead -->
+
+		<!-- BEGIN forumrow -->
+		<li class="catrow" id="{catrow.forumrow.FORUM_NAME}">
+			<div id="cat">
+				<div class="cat-title">
+					<a href="{catrow.forumrow.U_VIEWFORUM}">{catrow.forumrow.FORUM_NAME}</a>
+				</div>
+				<div class="cat-vava">
+					<!-- BEGIN avatar -->
+					<span>{catrow.forumrow.avatar.LAST_POST_AVATAR}</span>
+					<!-- END avatar -->
+				</div>
+				<div class="cat-lastmsg">
+					<span>
+						<!-- BEGIN switch_topic_title -->
+						<a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">{catrow.forumrow.LATEST_TOPIC_NAME}</a><br />
+						<!-- END switch_topic_title -->
+						{catrow.forumrow.USER_LAST_POST}
+					</span>
+				</div>
+				<div class="cat-numbers">
+					<div class="suj">
+						<n>{catrow.forumrow.TOPICS}</n><br />sujets
+					</div>
+					<div class="msg">
+						<n>{catrow.forumrow.POSTS}</n><br />messages
+					</div>
+				</div>
+				<div class="cat-new">
+					<img title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" />
+				</div>
+				<div class="cat-ssfo">
+					{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
+				</div>
+				<script type="text/javascript">
+					//<![CDATA[
+					$('.cat-ssfo').each(function() {
+						$(this).html($(this).html().replace(/>, /g, ">"));
+					});
+					//]]>
+				</script>
+			</div>
+		</li>
+		<!-- END forumrow -->
+
+		<!-- BEGIN tablefoot -->
+	</ul>
+</div>
+<!-- END tablefoot -->
+<!-- END catrow -->
+
+<script type="text/javascript">
+	//<![CDATA[
+	$(document).ready(function() {
+		var btn_collapse = $('<div></div>', {
+			class: 'btn-collapse'
+		});
+
+		var btn_collapse_show = $('<i></i>', {
+			class: 'ion-android-add-circle hidden',
+			'data-tooltip': '{L_EXPEND_CAT}'
+		}).appendTo(btn_collapse);
+
+		var btn_collapse_hide = $('<i></i>', {
+			class: 'ion-android-remove-circle',
+			'data-tooltip': '{L_HIDE_CAT}'
+		}).appendTo(btn_collapse);
+
+		var collapsed = [];
+
+		if (readCookie('collapsed') != null && readCookie('collapsed') != '') {
+			collapsed = readCookie('collapsed').split(',');
+		}
+
+		$(document).on('click', '.btn-collapse', function() {
+			$(this).children('.ion-android-add-circle').toggleClass('hidden');
+			$(this).children('.ion-android-remove-circle').toggleClass('hidden');
+			$(this).parents('.forabg').toggleClass('hidden');
+
+			if (readCookie('collapsed') != null && readCookie('collapsed') != '') {
+				collapsed = readCookie('collapsed').split(',');
+			}
+
+			if (!$(this).parents('.forabg').hasClass('hidden')) {
+				removeFromArray('' + $(this).parents('.forabg').data('cindex'), collapsed);
+
+				createCookie('collapsed', collapsed);
+			} else {
+				collapsed.push('' + $(this).parents('.forabg').data('cindex'));
+
+				createCookie('collapsed', collapsed);
+			}
+		});
+
+		$('.forabg').each(function(i) {
+			$(this).data('cindex', '' + i);
+
+			$(btn_collapse)
+				.clone()
+				.attr('id', 'forabg' + i)
+				.appendTo($(this).find('.header'));
+
+			if ($.inArray('' + i, collapsed) > -1) {
+				$(this).toggleClass('hidden');
+				$('#forabg' + i).children('.ion-android-add-circle').toggleClass('hidden');
+				$('#forabg' + i).children('.ion-android-remove-circle').toggleClass('hidden');
+			}
+		});
+	});
+
+	function removeFromArray(item, array) {
+		var i = array.indexOf(item);
+
+		if (i > -1) {
+			array = array.splice(i, 1);
+		}
+	}
+
+	function createCookie(name, value, days) {
+		var expires;
+
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+			expires = "; expires=" + date.toGMTString();
+		} else {
+			expires = "";
+		}
+		document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+	}
+
+	function readCookie(name) {
+		var nameEQ = encodeURIComponent(name) + "=";
+		var ca = document.cookie.split(';');
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+			if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+		}
+		return null;
+	}
+	//]]>
+</script>

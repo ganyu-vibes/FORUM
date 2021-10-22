@@ -1,0 +1,185 @@
+#CATlinkstop {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+#CATlinkstop .link {
+  margin: 0 7px;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+#CATall {
+  width: 780px;
+  position: relative;
+  margin: auto;
+}
+
+#CATall .CATtitle {
+  background: linear-gradient(-90deg, #848cbd, #919dc6);
+  text-align: center;
+  font-family: "Playfair Display";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: inset 0px -5px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  color: white;
+}
+
+#CATall .CATtitle h2 {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  margin: 0;
+}
+
+#CATall .CATtitle:before {
+  content: "———";
+  font-weight: 400;
+  letter-spacing: -3px;
+  margin-right: 10px;
+}
+
+#CATall .CATtitle:after {
+  content: "———";
+  font-weight: 400;
+  letter-spacing: -3px;
+  margin-left: 10px;
+}
+
+#CATall .CATsousfo {
+  width: 100%;
+  height: 120px;
+  border-bottom: 1px solid gainsboro;
+  font-size: 9px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+
+#CATall .CATsousfo .sfavatar {
+  width: 69px;
+  height: 110px;
+  object-fit: cover;
+}
+
+#CATall .CATsousfo .sfavatar img {
+  width: 100%;
+  filter: grayscale(1);
+}
+
+#CATall .CATsousfo .CATsftitle {
+  box-sizing: border-box;
+  width: 150px;
+  text-align: center;
+  margin: 0 0 10px 0;
+  line-height: 9px;
+}
+
+#CATall .CATsousfo .CATsftitle a {
+  font-family: "Playfair Display";
+  font-style: italic;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+}
+
+#CATall .CATsousfo .CATsftitle a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #848cbd;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+
+#CATall .CATsousfo .CATsftitle a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+#CATall .CATsousfo .CATlastmsg {
+  box-sizing: border-box;
+  text-align: center;
+  width: 150px;
+  font-size: 9px;
+  height: 50px;
+  padding: 10px 0 0 0;
+  text-transform: uppercase;
+}
+
+#CATall .CATsousfo .CATlastmsg a {
+  text-transform: lowercase;
+  font-size: 12px;
+  font-style: italic;
+}
+
+#CATall .CATsousfo .CATdesc {
+  width: 270px;
+  box-sizing: border-box;
+  height: 80px;
+  overflow: auto;
+  padding: 5px;
+  text-transform: uppercase;
+  text-align: justify;
+  line-height: 10px;
+  font-size: 8px;
+}
+
+#CATall .CATsousfo .CATdesc l {
+  font-family: "Playfair Display";
+  text-transform: lowercase;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 700;
+  color: #848cbd;
+}
+
+#CATall .CATsousfo .CATsflinks {
+  width: 270px;
+  box-sizing: border-box;
+  text-align: right;
+  margin: 5px 0 0 0;
+}
+
+#CATall .CATsousfo .CATsflinks a {
+  font-size: 9px;
+  text-transform: lowercase;
+}
+
+#CATall .CATsousfo .CATsuj,
+#CATall .CATsousfo .CATmsg {
+  box-sizing: border-box;
+  width: 65px;
+  height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 30px;
+}
+
+#CATall .CATsousfo n {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+#CATall .CATsousfo .CATnew {
+  width: 69px;
+  height: 110px;
+}
+
+#CATall .CATsousfo .CATnew img {
+  width: 69px;
+  height: 110px;
+  object-fit: cover;
+}

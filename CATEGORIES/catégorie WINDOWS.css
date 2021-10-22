@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Xanh+Mono:ital@0;1&display=swap");
+
+:root {
+  --baw: url("https://i.imgur.com/Xn3pNJo.jpg");
+  --font1: "Xanh Mono";
+  --font2: "Inter";
+  --black: #1e1e1e;
+  --grey: #7f7f7f;
+  --color1: #e37fb8;
+  --color2: #ac7ee7;
+  --bg1: #414141;
+  --bg2: #292929;
+  --text-color: #fff;
+  --bg-color: var(--black);
+  --soft-color: #666;
+  --hard-color: #070707;
+  --bann: url("https://i.imgur.com/Ys4AW1v.png");
+  --categorie: url("https://i.imgur.com/OIXxw0v.gif");
+  --titrecate: linear-gradient(90deg, #b9ffd9, #df91ff);
+  --footer: var(--bg-color);
+  --scrollbar: linear-gradient(to top, var(--color1), var(--color2));
+  --bg-image: url("https://i.imgur.com/oCNsmg3.png");
+}
+
+body {
+  background-color: var(--bg1);
+  background-image: var(--bg-image);
+  color: var(--text-color);
+}
+
+wrap {
+  width: 900px;
+  height: 100%;
+  display: block;
+  margin: auto;
+  counter-reset: categorie;
+}
+
+/* ------------------------------------ */
+.po-1categorie {
+  width: 100%;
+  font-size: 12px;
+  font-family: var(--font2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.po-1categorie div {
+  box-sizing: border-box;
+}
+
+.po-cat-titre {
+  width: 100%;
+  font-family: var(--font1);
+  font-size: 25px;
+  text-transform: uppercase;
+  padding: 40px 30px;
+}
+
+.po-cat-titre:before {
+  counter-increment: categorie;
+  content: "00"counter(categorie) " .*ﾟ+ ";
+  border-bottom: 2px solid var(--hard-color);
+  padding: 0 0 7px 8px;
+}
+
+.po-cat-titre span {
+  border-bottom: 2px solid var(--hard-color);
+  padding: 0 8px 7px 0;
+}
+
+.po-1forum {
+  background: var(--bg-color);
+  margin: 8px 0;
+  border: 2px solid var(--hard-color);
+  position: relative;
+}
+
+.po-fo-underpage {
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  border: 2px solid var(--hard-color);
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  z-index: -1;
+}
+
+.po-fo-window {
+  width: 100%;
+  color: var(--hard-color);
+  font-size: 10px;
+  padding: 5px;
+  border-bottom: 2px solid var(--hard-color);
+  position: relative;
+}
+
+.po-fo-window .th-circle {
+  margin: 0 2px;
+}
+
+.po-fo-window .th-cross {
+  position: absolute;
+  right: 5px;
+}
+
+.po-fo-content {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.po-fo-title {
+  font-family: var(--font1);
+  font-size: 23px;
+  text-transform: lowercase;
+}
+
+.po-fo-title span {
+  width: 100%;
+  background: transparent;
+  padding: 0 3px;
+}
+
+.po-fo-title:before {
+  content: "\eb68";
+  font-family: "honeybee";
+  font-size: 0.8em;
+  margin-right: 10px;
+}
+
+.po-1forum:hover .po-fo-title:before {
+  content: "\eb67";
+}
+
+.po-1forum:hover .po-fo-title span {
+  background: var(--hard-color);
+}
+
+.po-fo-lastava {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  padding: 8px;
+  background: var(--hard-color);
+}
+
+.po-fo-lastava img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 100%;
+  filter: grayscale(1);
+}
+
+.po-fo-lastmsg {
+  width: 20%;
+  border: 2px solid var(--hard-color);
+}
+
+.po-fo-lastmsg-title {
+  width: 100%;
+  padding: 7px;
+  border-bottom: 2px solid var(--hard-color);
+}
+
+.po-fo-lastmsg-title:before {
+  content: "\ea30";
+  font-family: "honeybee";
+  margin-right: 5px;
+}
+
+.po-fo-lastmsg-content {
+  width: 100%;
+  padding: 15px 7px;
+  text-align: center;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: var(--grey);
+}
+
+.po-fo-lastmsg-content a {
+  font-family: var(--font1);
+  font-size: 1.4em;
+  color: var(--text-color);
+  text-decoration: none;
+  background: transparent;
+  padding: 0 3px;
+  text-transform: lowercase;
+}
+
+.po-fo-lastmsg-content .gensmall {
+  font-family: var(--font2);
+  text-transform: lowercase;
+  font-size: 1.3em;
+  background: none;
+}
+
+.po-fo-lastmsg-content .gensmall:hover {
+  background: none;
+}
+
+.po-fo-lastmsg-content a:hover {
+  background: var(--hard-color);
+}
+
+.po-fo-numbers {
+  width: 20%;
+  background: var(--hard-color);
+  box-shadow: 2px 2px 0 0 var(--grey);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.6;
+}
+
+.po-fo-numbers-suj,
+.po-fo-numbers-msg {
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.po-fo-numbers n {
+  font-size: 1.7em;
+  font-weight: bold;
+  font-family: var(--font1);
+}
+
+.po-fo-subfo {
+  width: 100%;
+  padding: 5px;
+  border-top: 2px solid var(--hard-color);
+  font-size: 1em;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+.po-fo-subfo a {
+  color: var(--grey);
+  text-decoration: none;
+  margin: 0 2px;
+}
+
+.po-fo-subfo a:before {
+  content: "/";
+}
+
+.po-fo-subfo a:hover {
+  color: var(--text-color);
+}
+
+#secrétariat {
+  width: 100%;
+}
+
+#piccasu,
+#patr\.onus {
+  width: 49%;
+}
+
+#piccasu .po-fo-content,
+#patr\.onus .po-fo-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+#piccasu .po-fo-title,
+#patr\.onus .po-fo-title {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+#piccasu .po-fo-lastava,
+#patr\.onus .po-fo-lastava {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+#piccasu .po-fo-lastmsg,
+#patr\.onus .po-fo-lastmsg {
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+}
+
+#piccasu .po-fo-numbers,
+#patr\.onus .po-fo-numbers {
+  grid-column: 3;
+  grid-row: 2;
+  width: 100%;
+}

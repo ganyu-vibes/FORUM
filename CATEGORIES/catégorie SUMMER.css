@@ -1,0 +1,212 @@
+body {
+  width: 800px;
+  margin: auto;
+}
+
+.patronus-1 ::-webkit-scrollbar {
+  width: 3px;
+}
+
+.patronus-1 ::-webkit-scrollbar-track {
+  background: black;
+}
+
+.patronus-1 ::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+.patronus-1 {
+  width: 100%;
+  background: whitesmoke;
+  box-sizing: border-box;
+}
+
+.patronus-1 po1 {
+  color: #e89d39;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: -1px;
+}
+
+.patronus-1 div {
+  box-sizing: border-box;
+}
+
+.patronus-1 .po-cattitle {
+  width: 100%;
+  background-image: url("https://i.pinimg.com/564x/f2/66/a5/f266a5138791370aaba674170db7e8aa.jpg");
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+  font-family: "Times";
+  font-style: italic;
+  color: white;
+  letter-spacing: -1px;
+  font-size: 24px;
+  line-height: 100px;
+  text-shadow: 2px 1px 0 #000;
+}
+
+.patronus-1 .po-forum {
+  width: 100%;
+  border-bottom: 1px solid gainsboro;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.patronus-1 .po-forum .po-new {
+  width: 15%;
+  height: 120px;
+}
+
+.patronus-1 .po-forum .po-new img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.patronus-1 .po-forum .po-blocfo {
+  width: 40%;
+  height: 120px;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-lienfo {
+  width: 100%;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-lienfo a {
+  text-decoration: none;
+  color: black;
+  font-family: "Times";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 17px;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-descr {
+  width: 100%;
+  height: 72%;
+  padding: 5px;
+  font-size: 11px;
+  text-align: justify;
+  background: white;
+  overflow: auto;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-descr img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 1px solid black;
+  padding: 3px;
+  transition: 1s ease-in-out;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-descr img:hover {
+  transform: rotate(360deg);
+  transition: 1s ease-in-out;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-descr .po-left {
+  float: left;
+  margin-right: 7px;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-descr .po-right {
+  float: right;
+  margin-left: 7px;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-sousfo {
+  width: 100%;
+  height: 14%;
+  padding: 0 2px;
+  font-size: 11px;
+  text-align: center;
+  background: white;
+  overflow: auto;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-sousfo::-webkit-scrollbar {
+  display: none;
+}
+
+.patronus-1 .po-forum .po-blocfo .po-sousfo a {
+  display: inline-block;
+  margin: 3px;
+  color: white;
+  background: #c4da7e;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 9px;
+  padding: 1px 4px;
+  font-weight: bold;
+}
+
+.patronus-1 .po-forum .po-avatar {
+  height: 120px;
+}
+
+.patronus-1 .po-forum .po-avatar img {
+  height: 100%;
+}
+
+.patronus-1 .po-forum .po-info {
+  width: 20%;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.patronus-1 .po-forum .po-info .po-nbsuj,
+.po-nbmsg {
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+.patronus-1 .po-forum .po-info .po-nbsuj {
+  background-image: linear-gradient(180deg, #c4da7e, white);
+}
+
+.patronus-1 .po-forum .po-info .po-nbmsg {
+  background-image: linear-gradient(180deg, #e89d39, white);
+}
+
+.patronus-1 .po-forum .po-info .po-lastmsg {
+  background: white;
+  width: 100%;
+  height: 64%;
+  text-align: center;
+  font-size: 10px;
+  display: table;
+}
+
+.patronus-1 .po-forum .po-info .po-lastmsg span {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.patronus-1 .po-forum .po-info .po-lastmsg a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: #7ab4b5;
+}
+
+.patronus-1 .po-forum .po-info .po-lastmsg play {
+  font-size: 12px;
+  font-weight: bold;
+}
