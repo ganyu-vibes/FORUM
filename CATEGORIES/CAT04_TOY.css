@@ -48,13 +48,14 @@
 }
 
 /* LISTE DE FORUMS */
-ul.forums {
+.forums {
   border-radius: 0;
 }
 
-ul.topiclist li {
+.topiclist li {
   margin-top: 15px;
   margin-bottom: 5px;
+  list-style: none;
 }
 
 /* SCROLLBAR CATEGORIE */
