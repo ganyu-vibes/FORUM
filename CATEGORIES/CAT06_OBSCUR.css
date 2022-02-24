@@ -1,11 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --black: #222;
+  --white: white;
+  --c1: #b09ff9;
+  --c2: #a558ed;
+  --c3: #f2469a;
+}
+
 body {
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Lexend';
+  font-size: 13px;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 1.2;
 }
 
-#po-1categorie {
-  width: 850px;
+div {
+  box-sizing: border-box;
+}
+
+#po-1category {
+  width: 900px;
   height: 260px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  position: relative;
+}
+
+.po-cat-left {
+  width: 25%;
+  padding: 8px;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.po-cat-title {
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3em;
+  left: 10%;
+  top: 18%;
+  letter-spacing: -.08em;
+  z-index: 99;
+}
+
+.po-cat-title:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  background-image: -webkit-linear-gradient(86deg, var(--c1) 5%, var(--c2) 53%, var(--c3) 91%);
+  height: 2%;
+  width: 110%;
+  z-index: -1;
+  transition: .3s ease-in-out;
+}
+
+.po-cat-title a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 0px 0 var(--black);
+}
+
+.po-cat-title:hover:before {
+  height: 100%;
+}
+
+.po-cat-suj-msg {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+}
+
+.po-cat-number {
+  font-size: 2.5em;
+  font-weight: 900;
+  letter-spacing: -.05em;
+}
+
+.po-cat-right {
+  width: 75%;
+  position: relative;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+
+.po-cat-subcat {
+  width: 95%;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: .9em;
+  font-weight: 500;
+}
+
+.po-cat-subcat span {}
+
+.po-cat-subcat a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.po-cat-state {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: var(--white);
+  box-shadow: 2px 1px 0 0 var(--black);
+}
+
+.po-cat-lastpost {
+  width: 25%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: .6rem;
+  line-height: 1.5;
+}
+
+.po-cat-lastpost a {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0 5px;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: .8rem;
+}
+
+.po-cat-lastpost a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.po-cat-lastava {
+  width: 100px;
+  height: 100px;
+}
+
+.po-cat-lastava img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.po-cat-desc {
+  width: 55%;
+  max-height: 50%;
+  overflow: auto;
+  padding: 0 8px 0 0;
+}
+
+.po-cat-desc span {
+  color: var(--c1);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  background: var(--white);
+  padding: 2px 5px;
+}
+
+.po-cat-desc::-webkit-scrollbar {
+  width: 2px;
+}
+
+.po-cat-desc::-webkit-scrollbar-thumb {
+  background: var(--black);
 }
